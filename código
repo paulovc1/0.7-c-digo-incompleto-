@@ -1,0 +1,24 @@
+funcionarios = []
+while True:
+    nome = input("Nome do funcionário (ou 'sair'): ")
+    if nome.lower() == 'sair':
+        break
+    carga_horaria = float(input("Carga hoaria"))
+    valor_hora = float(input("Valor da hora:"))
+    funcionarios.append({'nome': nome, 'carga_horaria': carga_horaria, 'valor_hora': valor_hora})
+
+print(f"\nTotal de funcionários: {len(funcionarios)}")
+
+while True:
+    nome_busca = input("Nome para calcular salário (ou 'sair'): ")
+    if nome_busca.lower() == 'sair':
+        break
+    for func in funcionarios:
+        if func['nome'].lower() == nome_busca.lower():
+            salario ==
+func['carga_horaria'] * func['valor_hora'] inss = salario * 0.1
+
+            print(f"Salario Bruto: R$ {salario:.2f}, INSS: R$ {inss:.2f}, Salário Líquido: R$ {salario - inss:.2f}")
+            break
+    else:
+        print("Funcionario não encontrado!")
